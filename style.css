@@ -4,9 +4,9 @@ body, input, textarea, select, button, table, a {
 }
 
 /* 폰트 */
-a {font-family: 'Lora', serif;}
-h1, h2, h3 {font-family: 'Nanum Brush Script', cursive;}
-p, li, button {font-family: 'Do Hyeon', sans-serif;}
+a {font-family: 'Lora', serif; font-weight: 400;}
+h1, h2, h3 {font-family: 'Nanum Brush Script', cursive; font-weight: 700;}
+p, li, button {font-family: 'Do Hyeon', sans-serif; font-weight: 400;}
 
 * {margin: 0; padding: 0;}
 body {background-color: rgb(255,255,255);}
@@ -80,10 +80,12 @@ body {background-color: rgb(255,255,255);}
   
   .show {display: block;}
 
+
   /*study.html - content1 */
-  
-  .study h2 { font-size: 40px; color: black;} 
-  .study h3 { font-size: 30px;}
+  .study h2, .study h3, .study p {margin: 0;}
+
+  .study h2 { font-size: 45px; color: black;}  
+  .study h3 { font-size: 35px;}
   .study p {color: black;}
 
   /* stuudy.html - content2 */ 
