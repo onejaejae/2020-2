@@ -1,0 +1,5 @@
+body { margin: 0; padding: 0;}
+#wrap, #header, #nav, #side, #content1, #content2, #footer, .menu ul li, .menu ul li a,  .container,#middle {width: 100%; padding: 0; height: 100%;}
+.menu ul li {float: none; width: 100%;}
+#side, #content1, #content2, .html, .css, .javascript {float: none;}
+div.meter {margin: 0 auto;}

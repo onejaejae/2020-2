@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width:800px)" href="mobile.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="title">
+                <h1>One's</h1>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="music.html" style="color: rgb(245,51,39);">Music</a></li>
+                    <li><a href="study.html">Study</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li id="drop"><div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Note
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">Javascript</a>
+                          <a class="dropdown-item" href="#">Jquery</a>
+                          <a class="dropdown-item" href="#">Jquery2</a>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="side">
+           <div class="music_img"><img src="images/윤딴딴1.jpg" alt=""></div>
+           <div class="music_img"><img src="images/윤딴딴2.jpg" alt=""></div>
+        </div>
+        <div id="middle">
+            <div id="content1">
+                <div id="slider">
+                    <a href="#" class="control_next">>></a>
+                    <a href="#" class="control_prev"><<</a>
+                    <ul>
+                      <li><iframe type="text/html" allowtransparency="true" frameborder="0" width="500" height="300" src="http://www.youtube.com/embed/RBZHUz6rZfg?controls=1&amp;rel=1&amp;autohide=1"></iframe></li>
+                      <li style="background: #aaa;"><iframe type="text/html" allowtransparency="true" frameborder="0" width="500" height="300" src="http://www.youtube.com/embed/5SxAoiztNXk?controls=1&amp;rel=1&amp;autohide=1"></iframe></li>
+                      <li><iframe type="text/html" allowtransparency="true" frameborder="0" width="500" height="300" src="http://www.youtube.com/embed/3GDD_Dpa7bQ?controls=1&amp;rel=1&amp;autohide=1"></iframe></li>
+                    </ul>  
+                  </div>
+                  <div class="slider_option">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox" style="font-family:'Do Hyeon', sans-serif; color: rgb(33,33,33)" >Autoplay Slider</label>
+                  </div>                   
+            </div>
+            <div id="content2">
+                <br><br><br>
+                <h2>playlist</h2>
+                <ol>
+                    <li>1. 겨울을 걷는다</li>
+                    <li>2. 니가 보고 싶은 밤</li>
+                    <li>3. 남은 기억</li>
+                </ol>
+            </div>
+        </div>  
+        <div id="footer">
+            <p>Copyright&copy;2020 by ChoWonjae. All rights reserved</p>
+            <p>phone : 010-5203-8907 email : magicnc7@gmail.com</p>
+        </div>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+   </script>
+    <script>   
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+   </script>
+   <script src="slid.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

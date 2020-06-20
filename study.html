@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width:800px)" href="mobile.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="title">
+                <h1>One's</h1>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="study.html" style="color: rgb(245,51,39);">Study</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li id="drop"><div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Note
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">Javascript</a>
+                          <a class="dropdown-item" href="#">Jquery</a>
+                          <a class="dropdown-item" href="#">Jquery2</a>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="side">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Click</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <a href="https://www.w3schools.com/html/" target="_blank">HTML</a>
+                        <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a>
+                        <a href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a>
+                        <a href="https://jquery.com/" target="_blank">JQUERY</a>
+                        <a href="https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/%EC%86%8C%EA%B0%9C" target="_blank">DOM</a>
+                        <a href="http://bootstrapk.com/" target="_blank">Bootstrap</a>
+                        <a href="https://codepen.io/" target="_blank">CodePen</a>
+                        <a href="https://www.netlify.com/" target="_blank">NETLIFY</a>
+                        <a href="https://github.com/" target="_blank">Github</a>
+                        <a href="https://www.w3.org/" target="_blank">W3C</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="content1" class="study">
+                
+                <h2 style="color: black;">2020 학습내역</h2><br>
+                <h3 style="color: blue;">HTML5</h3>
+                <p>HTML5 기본 태그, HTML5 입력 양식 태그와 구조화 태그</p>
+                <h3 style="color: red;">CSS3</h3>
+                <p>CSS3 기초: 선택자와 단위, CSS3 속성, 다양한 레이아웃의 구성과 기능, 반응형 웹</p>
+                <h3 style="color: green;">JavaScript</h3>
+                <p>자바스크립트 기본 문법, 문서 객체</p>
+
+            </div>
+            <div id="content2" class="content2_bar" >
+                    <img class="html bar" src="images/html.png" alt="">
+                    <div class="meter bar">
+                        <span style="width:90%"></span>
+                        <p>90%</p>
+                    </div>
+                    <div class="meter bar">
+                        <span style="width:90%"></span>
+                        <p>90%</p>
+                    </div>
+                    <img class="css bar" src="images/css.png" alt="">
+                    <div class="meter bar">
+                        <span style="width:70%"></span>
+                        <p>70%</p>
+                    </div>
+                    <img class="javascript bar" src="images/javascript.png" alt="">
+            </div>
+
+        </div>  
+        <div id="footer">
+            <p>Copyright&copy;2020 by ChoWonjae. All rights reserved</p>
+            <p>phone : 010-5203-8907 email : magicnc7@gmail.com</p>
+        </div>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+   </script>
+    <script>   
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
